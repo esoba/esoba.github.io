@@ -1,17 +1,13 @@
 ---
 layout: about
-title: about
+title: about me
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: Machine Learning @ Deloitte
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  image_circular: true # crops the image to make it circular
 
 news: true # includes a list of news items
 latest_posts: true # includes a list of the newest posts
@@ -19,8 +15,6 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hello and welcome to my portfolio/blog! My name is Elijah, a machine learning researcher. I graduated from the University of Michigan ([Go Blue](https://youtu.be/Fb7hr45ZyDE?si=418mmTBiVWgI0E71)) in '21 with a Bachelors in Biomedical Engineering, and again in '22 with a Masters in Electrical Engineering focusing on [Signal Processing/Machine Learning](https://ece.engin.umich.edu/research/research-areas/signal-image-processing-and-machine-learning/). I currently work at Deloitte's AI Center of Excellence on the Generative AI team. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+My goal is to dump the lessons I've learned over the years from academia, industry, and self-teaching to help people learn/understand ML. Specifically, I want this to be the resource I wish I had when I was just starting out. Whether it be the fundamentals, advanced topics, coding, cloud, etc., I want to encapsulate information so people at all levels can get something out of it. 
