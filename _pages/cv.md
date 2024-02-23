@@ -1,7 +1,7 @@
 ---
 layout: cv
-permalink: /resume/
-title: Resume
+permalink: assets/pdf/Soba_Elijah_Resume.pdf/
+title: resume
 nav: true
 nav_order: 5
 cv_pdf: Soba_Elijah_Resume.pdf

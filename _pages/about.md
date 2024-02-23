@@ -6,7 +6,7 @@ subtitle: Machine Learning @ Deloitte
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: pinhead.png
   image_circular: true # crops the image to make it circular
 
 latest_posts: true # includes a list of the newest posts
