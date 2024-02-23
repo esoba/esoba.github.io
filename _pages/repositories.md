@@ -1,8 +1,8 @@
 ---
 layout: page
-permalink: /repositories/
-title: repositories
-description: Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
+permalink: /resources/
+title: resources
+description: Here are some resources I have found super helpful and use to this day
 nav: true
 nav_order: 4
 ---
