@@ -1,6 +1,6 @@
 ---
 layout: cv
-permalink: /assets/pdf/example_pdf.pdf
+permalink: /assets/pdf/Soba_Elijah_Resume.pdf
 newtab: true
 title: resume
 nav: true
