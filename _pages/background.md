@@ -12,12 +12,12 @@ mermaid:
 Whenver I am looking up machine learning related topics and come across a blog/source/medium post, my first thought is "should I trust this person". The answer is usually yes, because there truly are so many smart people out there helping to educate the ML community. However, my curiosity typically feeds into a negative feed back loop that goes something like: 
 
 ```mermaid
-graph TD;
-    I find a good source from someone really smart-->I read through it;
-    I read through it-->I get confused with the flood of information;
-    I get confused with the flood of information-->I assume I am dumb because a smart person wrote it;
-    I assume I am dumb because a smart person wrote it-->I look for a new source that I can understand better;
-    I look for a new source that I can understand better-->I find a good source from someone really smart;
+flowchart
+    A(I find a good source from someone really smart)-->B(I read through it)
+    B-->C(I get confused with the flood of information)
+    C-->D(I assume I am dumb because a smart person wrote it)
+    D-->E(I look for a new source that I can understand better)
+    E-->A
 ```
 
 I talk a little bit more about this in my [post]() about imposter syndrome, but I think for people who experience this or something similar its important to say a couple things upfront: 
