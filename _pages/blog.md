@@ -15,6 +15,7 @@ pagination:
     before: 1 # The number of links before the current page
     after: 3 # The number of links after the current page
 ---
+# Hello
 [A little background](https://esoba.github.io/background/)
 <div class="post">
 
@@ -26,6 +27,7 @@ pagination:
   <div class="header-bar">
     <h1>{{ site.blog_name }}</h1>
     <h2>{{ site.blog_description }}</h2>
+    <h3>A little background and motivation <a href = "https://esoba.github.io/background/">here</a></h3>
   </div>
   {% endif %}
 

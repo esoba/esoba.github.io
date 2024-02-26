@@ -122,7 +122,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: Platypus ML # blog_name will be displayed in your blog page
-blog_description: A jack-of-all-trades guide to machine learning 
+blog_description: A jack-of-all-trades guide to machine learning.
 permalink: /blog/:year/:title/
 
 # Pagination
