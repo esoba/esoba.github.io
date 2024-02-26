@@ -2,7 +2,9 @@
 layout: default
 title: background
 permalink: /background/
-mermaid: true
+mermaid:
+  enabled: true
+  zoomable: true
 ---
 
 # Background
