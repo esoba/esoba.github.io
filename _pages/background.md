@@ -2,7 +2,10 @@
 layout: default
 title: background
 permalink: /background/
+mermaid: true
 ---
+
+# Background
 
 Whenver I am looking up machine learning related topics and come across a blog/source/medium post, my first thought is "should I trust this person". The answer is usually yes, because there truly are so many smart people out there helping to educate the ML community. However, my curiosity typically feeds into a negative feed back loop that goes something like: 
 
@@ -24,7 +27,7 @@ I talk a little bit more about this in my [post]() about imposter syndrome, but 
 
 I don't know to what extent other blog-posters feel this, but I thought it was important to mention. If you have any questions/feedback please feel free to message me on any social media platform, I really do want to help. 
 
-In an effort of full transparency, here's a little backstory on me and how I got to this point. If you are more motivated by the "what have you actually done" part, check out my [resume](). 
+In an effort of full transparency, here's a little backstory on me and how I got to this point. If you are more motivated by the "what have you actually done" part, check out my [resume](https://esoba.github.io/assets/pdf/Soba_Elijah_Resume.pdf). 
 
 ## Backstory
 
