@@ -3,9 +3,13 @@ github_users:
   - alshedivat
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
+  - mrdbourke/pytorch-deep-learning
+  - langchain-ai/langchain
+  - mattharrison/effective_pandas_book
+  - donnemartin/data-science-ipython-notebooks
+  - josephmisiti/awesome-machine-learning
+  - vinta/awesome-python
+  - https://github.com/visenger/awesome-mlops
   - jquery/jquery
   - FortAwesome/Font-Awesome
   - jpswalsh/academicons

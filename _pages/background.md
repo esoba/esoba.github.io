@@ -4,7 +4,7 @@ title: background
 permalink: /background/
 mermaid:
   enabled: true
-  zoomable: true
+  zoomable: false
 ---
 
 # Background

@@ -22,9 +22,9 @@ Growing up I was always a "I just love the games I don't support a specific team
 My grandma, the greatest chef ever, would always flood my house with the aroma of some incredible Ecuadorian food. It was always the thing I missed the most about being away from home. Cooking is truly an art and I have loved cooking all different kinds of things. Every time I step into the kitchen, I start thinking about me being on chopped/getting judged by Gordon Ramsey. Here are some of my favorite things to make lately:
 
 - Carne guisada
+- Encebollado de Atun
 - Chicken Shawarma 
 - Thai noodles
-- 
 
 # Music 
 Whatever I do throughout my day, with the exception of sleep, I always have some type of music playing. It may be a cliche, but I really do love all types of music and listen to a whole bunch of different artists/genres. I think that may be influenced by me listening to Pandora radio as my primary music provider until I was 16. 

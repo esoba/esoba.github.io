@@ -17,4 +17,4 @@ Hello and welcome to my portfolio/blog! My name is Elijah, a machine learning re
 
 My goal is to dump the lessons I've learned over the years from academia, industry, and self-teaching to help people learn/understand ML. Specifically, I want this to be the resource I wish I had when I was just starting out. Whether it be the fundamentals, advanced topics, coding, cloud, etc., I want to encapsulate information so people at all levels can get something out of it. 
 
-To get to know me personally, take a look at some of my [interests]()
+To get to know me personally, take a look at some of my [interests](https://esoba.github.io/interests/)
