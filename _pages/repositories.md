@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /resources/
-title: Resources
+title: resources
 description: Here are some resources I have found super helpful and use to this day
 nav: true
 nav_order: 4
