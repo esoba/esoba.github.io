@@ -55,3 +55,4 @@ Not to say that traditional computer science solutions do not require the points
 
 
 As the hype for Generative AI grows (as it should!), terms like ChatGPT, LLMs, AI, Machine Learning, etc. are all getting bundled together to mean the same thing. I think if you are someone who wants to use Generative AI, it is worth it to understand the  different terminology in the space and the basics behind how everything works. This will not only ground expectations for Generative AI applications, but also make it easier to talk to talent who will eventually make those applications. 
+
