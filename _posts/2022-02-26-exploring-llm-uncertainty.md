@@ -6,7 +6,7 @@ description: How much can we trust the output of an LLM?
 tags: NLP AI-Trust/Safety GenAI 
 categories: advanced
 ---
-**More coming soon**
+**Coming 04/19!**
 
 ## Intro
 
@@ -40,9 +40,6 @@ P(Yes|input_sequence)*Prob(,|input_sequence + Yes) * Prob(this|input_sequence + 
 The probability that this sequence is the answer would not be the same as the probability from the discrete “True” answer above. Sparing the math, the main point is that semantic similarity is not preserved when calculating confidence for a completion that is >1 token long. 
 In many applications for eDiscovery, the completion is never just a simple yes or no. There is typically a reasoning or some other meta data extraction behind it. This makes it difficult to come up with a confidence score based on token probabilities alone. 
 This is also why asking an LLM itself to return a confidence score is not a great solution either. Consider an example where I ask an LLM to return confidence on a scale of 1-10. If it returns 5 with say 40% confidence, were getting a number its 1) not confident in the first place and 2) not in line with the actual proportion for 1-10. 
-
-
-#### Token Probability Entropy
 
 ### What evaluation metrics has research come up with? 
 

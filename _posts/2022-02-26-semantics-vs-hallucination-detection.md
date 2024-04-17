@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Conversations with ML Professionals 
+title: Semantics vs Hallucination Detection
 date: 2024-02-26 17:00:10
-description: How to talk to ML professionals to get real insights
-tags: ML Beginner
-categories: non-technical
+description: How well do OOB encodings work for Hallucination Detection
+tags: NLP GenAI
+categories: advanced
 ---
-
+**Coming Soon!**
 ## Machine Learning Glossary 
 
 Before diving in, I think it is useful to give some definitions before hand. Understanding these definitions, at the very least, will make conversations with ML professionals a lot easier 
