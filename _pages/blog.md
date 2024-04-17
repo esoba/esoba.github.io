@@ -25,6 +25,7 @@ pagination:
   <div class="header-bar">
     <h1>{{ site.blog_name }}</h1>
     <h2>{{ site.blog_description }}</h2>
+    <h5>Next blog post: Exploring LLM uncertainty</h5>
     <h7>A little background and motivation <a href = "https://esoba.github.io/background/">here</a></h7>
   </div>
   {% endif %}

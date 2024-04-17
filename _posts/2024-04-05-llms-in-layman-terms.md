@@ -39,19 +39,19 @@ Assuming she was able to pass the test eventually, what would the performance lo
 
 If you can understand this mental model, you can understand LLMs! To get to LLMs, do the following: 
 - Replace the person with a statistical model designed to understand the relationship between texts
-- Replace the encyclopedia with the entire internet 
-- Replace the test with any user question 
+- Replace the encyclopedia with the entire internet (or some incredibly large text corpus)
+- Replace the test with any user query
 
 Any question you have about LLMs, first ask the question to Gill. For example:
 
 (LLM Question)
 Why do LLMs return non-factual information?
 
+LLM Related Answer:
+- LLMs learn a probability distribution over next possible tokens in a sequence. When you give an LLM an input it will try to complete it by sampling tokens it thinks should come next (according to the distribution it learned). They are auto-regressive, so they use their own outputs to generate more input. LLMs technically don't memorize information, if it did it would overfit to the exact specific information it was trained on. Because everything is based on probabilities, sampling can cause information to be false. Likewise, because it is autoregressive, one improperly sampled token creates a downstream affect that can lead to a non-factual answer. Just because a LLM may have seen a particular bit of information during training, doesn't mean the signal was strong enough to influence the learned probability distribution for your particular question. If it didn't see the user query at all during training (like if you ask "When is my birthday?"), it will definitely return a wrong answer (or reason with you that it can't answer that question).
+
 (Converted Gill Question)
 Why did you get that question on the test wrong?
-
-LLM Related Answer:
-- LLMs learn a probability distribution over next possible tokens in a sequence. When you give an LLM an input it will try to complete it by sampling tokens it thinks should come next (according to the distribution it learned). They are auto-regressive, so they use their own outputs to generate more input. LLMs technically don't memorize information, if it did it would overfit to the exact specific information it was trained on. Because everything is based on probabilities, sampling can cause information to be false. Likewise, because it is autoregressive, one improperly sampled token creates a downstream affect that can lead to a non-factual answer. Just because a LLM may have seen a particular bit of information during training, doesn't mean the signal was strong enough to influence the learned probability distribution.
 
 Gills Answer:
 
