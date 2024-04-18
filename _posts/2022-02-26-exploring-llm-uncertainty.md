@@ -6,17 +6,60 @@ description: How much can we trust the output of an LLM?
 tags: NLP AI-Trust/Safety GenAI 
 categories: advanced
 ---
-**More coming soon**
 
 ## Intro
 
-Large Language Models (LLMs) are able to generate content by sampling from a learned probability distribution over possible next tokens. Even though modern LLMs have been trained on most of the internet (multiple times over) and have billions of parameters, there is no real guarentee on an LLMs output. To date, there is no way to fully measure how certain an LLM output is besides human verification. If we can understand what makes an LLM certain/uncertain in its output, it would have huge implications not only for LLM applications, but also for the publics trust in AI as a whole. Below, I'll explore some concepts and why this is such a hard problem.
+Large Language Models (LLMs) are able to generate content by sampling from a learned probability distribution over possible next tokens. Even though modern LLMs have been trained on trillions of words (tokens) and have billions of parameters, there is no real guarentee on an LLMs output. To date, there is no way to fully measure how certain an LLM output is besides human verification. If we can understand what makes an LLM certain/uncertain in its output, it would have huge implications not only for LLM applications, but also for the publics trust in AI as a whole. Below, I'll explore some concepts and why this is such a hard problem.
 
-### Uncertainty vs Confidence vs Calibration
+## Quick Note
+There is a bunch of research into ML model uncertainty and I won't be able to cover it all in this post. When doing research into this topic, I fell into countless rabit holes covering many areas related to probability theory and its role in Machine Learning. If you are like me and enjoy that deep dive into pure fundamentals, I think this [slide deck](https://www.gatsby.ucl.ac.uk/~balaji/balaji-uncertainty-talk-cifar-dlrl.pdf) is a great place to start. I am also planning on doing a deep dive into Bayesian statistics and it's role in ML so keep a look out for that!
 
-### Why can't we use output probabilities to measure uncertainty?
+Also, a majority of this post will be related to classification uncertainty since LLMs are auto-regressive token *classifiers*. There is a lot more to be said about uncertainty for regression and unsupervised problems but I u
 
-Because LLMs output token probabilities, it would seem reasonable that the probability of a sequence would be a good proxy for uncertainty. Or, at the very least, there would be some meaningful way to combine token probabilities to make a good uncertainty metric. With a singular token output, this could work. Consider the following example: 
+
+## What exactly is uncertainty in ML?
+> All models are wrong, but models that know when they are wrong, are useful.
+
+Uncertainty measures how much we can trust the predictions from a model. There are two types of uncertainty in ML:
+- epistemic: uncertainty from model (learned parameters)
+- aleatoric: uncertainty from the data (stochasticity of observations)
+
+Epistemic is said to be reducible, meaning that in the presence of more data our model can do better at solving a given task. Assuming we had a model with infinite capacity (aka ability to learn any data pattern), our epistemic uncertainty would fall to 0 if we gave it infinite data. This is equivalent to saying if you overfit a model trained on every possible datapoint, you can always be certain your model will correctly classify that data. A model will have high epistemic uncertainty when looking at a datapoint that comes from a different distribution than the data it was trained on (and vice versa). This uncertainty can be measured by training multiple models on different subsets of data and measuring the variability of the predictions. 
+
+Aleatoric is irreducible, meaning that even in the presence of infinite data there will still be uncertainty in our predictions. This is due to the inherent randomness of data. Typically, observations/data we get from our environment will be noisy and we will not be able to know how that noise is distributed ahead of time. Because we cannot account for these perturbations, we have to accept that our model may be subject to data that is out of distribution (OOD) from its training data.
+
+When people refer to uncertainty without any particular label (like epistemic or aleatoric), they are typically referring to total uncertainty: 
+
+Total Uncertainty = Epistemic + Aleatoric
+
+Uncertainty estimates fall into 4 categories: 
+- Single deterministic methods: Measure uncertainty based single pass through model
+- Ensemble methods: Measure uncertainty based on multiple models output
+- Bayesian methods: Measure uncertainty based on stoachasticity of model
+- Test time augmentation methods: Measure uncertainty by augmenting data
+
+Common evaluation metrics for uncertainty include: 
+- Calibration: Measures the agreement between predicted probabilities and observed frequencies 
+    - Of all the times a model predicted class X with probability P, what fraction did we observe class X?
+- Log liklihood: Measures how well the model fit the data it was trained on
+- Entropy: How random/surprising a models predictions are
+
+Research in this space concerns itself with estimating the different types of uncertainty, and coming up with a total uncertainty measure that is representative of the task a particular model is trying to solve. 
+
+One thing I think is important to note here is that there is a difference between model uncertainty and model performance. Model performance considers the label output of the model compared to some known labels and uncertainty considers whether we should be asking the model to provide labels in the first place. 
+
+## Generation makes things a little tricky
+For supervised learning tasks (classification/regression), the problem statement for measuring total uncertainty is relatively straight forward: given a set of predictions and ground truth labels, what can we say about how sure the model is of its predictions? In classification settings, we can make statements about uncertainty based on a models output probabilities. In regression settings, we can make statements Consider a model that classifies dogs, cats, and birds. f we are trying to identify a picture of a cow, we can When we shift to generation tasks, the problem statement gets a little fuzzy. It is something like: 
+
+I like to think of the generation task as a sequence of classifications or regressions. For example, LLM text completions are sequences of auto-regressive token classifications, and image generations are sequences of pixel regressions.  In addition, data is being 
+
+In classification problems, the output of our models is a probability distribution $p(y | x)$. This naturally translates to 
+
+a model is only as certain as it most certain token?
+
+## Why can't we use output probabilities to measure uncertainty?
+
+Because LLMs output token probabilities, it would seem reasonable that the probability of a sequence would be a good proxy for uncertainty. Or, at the very least, there would be some meaningful way to combine token probabilities to make a good uncertainty metric. With a singular token output, this could work. Consider the following example (and assume True/False are 1 token): 
 
 Prompt: 
 Given the following headline, determine if it is related to AI. Respond with only a true or false.
@@ -49,3 +92,6 @@ This is also why asking an LLM itself to return a confidence score is not a grea
 ### Does asking an LLM to rate its own output work?
 
 ### 
+
+sources 
+https://arxiv.org/pdf/2307.10236.pdf
