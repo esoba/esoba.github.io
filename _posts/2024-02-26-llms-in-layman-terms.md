@@ -47,15 +47,15 @@ Any question you have about LLMs, first ask the question to Gill. For example:
 (LLM Question)
 Why do LLMs return non-factual information?
 
-(Converted Gill Question)
-Why did you get that question on the test wrong?
-
 LLM Related Answer:
 - LLMs learn a probability distribution over next possible tokens in a sequence. When you give an LLM an input it will try to complete it by sampling tokens it thinks should come next (according to the distribution it learned). They are auto-regressive, so they use their own outputs to generate more input. LLMs technically don't memorize information, if it did it would overfit to the exact specific information it was trained on. Because everything is based on probabilities, sampling can cause information to be false. Likewise, because it is autoregressive, one improperly sampled token creates a downstream affect that can lead to a non-factual answer. Just because a LLM may have seen a particular bit of information during training, doesn't mean the signal was strong enough to influence the learned probability distribution.
 
+(Converted Gill Question)
+Why did you get that question on the test wrong?
+
 Gills Answer:
 
-I read about this question, but I didn't remember the answer. It was such a small part of the encyclopedia so I couldnt recall the exact details. 
+I read about information regarding the question, but I couldnt remember during the test. It was such a small part of the encyclopedia so I couldnt recall the exact details. 
 
 (LLM Question)
 Can LLMs do math?
