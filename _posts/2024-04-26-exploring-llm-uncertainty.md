@@ -7,6 +7,8 @@ tags: NLP AI-Trust/Safety GenAI
 categories: advanced
 ---
 
+**Will finish by 04/23/24!**
+
 ## Intro
 
 Large Language Models (LLMs) are able to generate content by sampling from a learned probability distribution over possible next tokens. Even though modern LLMs have been trained on trillions of words (tokens) and have billions of parameters, there is no real guarentee on an LLMs output. To date, there is no way to fully measure how certain an LLM output is besides human verification. If we can understand what makes an LLM certain/uncertain in its output, it would have huge implications not only for LLM applications, but also for the publics trust in AI as a whole. Below, I'll explore some concepts and why this is such a hard problem.
