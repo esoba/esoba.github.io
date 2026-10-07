@@ -1,10 +1,31 @@
 :root {
+  color-scheme: light;
   --paper: #faf9f6;
   --ink: #252b28;
   --muted: #69716b;
   --line: #dddeda;
   --accent: #33735b;
   --wash: #eef1e9;
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #191e1b;
+  --ink: #e3e8e2;
+  --muted: #a5afa7;
+  --line: #354039;
+  --accent: #93c9ae;
+  --wash: #27342c;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --paper: #191e1b;
+    --ink: #e3e8e2;
+    --muted: #a5afa7;
+    --line: #354039;
+    --accent: #93c9ae;
+    --wash: #27342c;
+  }
 }
 * {
   box-sizing: border-box;
@@ -72,6 +93,7 @@ summary:focus-visible {
 }
 .site-header nav {
   display: flex;
+  align-items: center;
   gap: 30px;
   font-size: 14px;
 }
@@ -464,4 +486,30 @@ h1 {
   html {
     scroll-behavior: auto;
   }
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+.theme-toggle:hover {
+  background: var(--wash);
+  color: var(--accent);
+}
+.theme-sun,
+html[data-theme="dark"] .theme-moon {
+  display: none;
+}
+html[data-theme="dark"] .theme-sun {
+  display: block;
 }

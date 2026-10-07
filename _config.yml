@@ -102,7 +102,7 @@ kramdown:
     block:
       line_numbers: false
 enable_math: true
-enable_darkmode: false
+enable_darkmode: true
 third_party_libraries:
   mathjax:
     integrity:

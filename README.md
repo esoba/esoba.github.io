@@ -13,6 +13,8 @@ bundle exec jekyll serve --livereload
 
 Open `http://localhost:4000`. Alternatively, use `docker compose up --build` and open `http://localhost:8080`.
 
+The sun/moon button at the right of the navigation switches between light and dark mode. The site initially follows your system preference and remembers an explicit choice across pages and visits.
+
 ## Write an entry
 
 Add `_posts/YYYY-MM-DD-title.md` with this front matter:

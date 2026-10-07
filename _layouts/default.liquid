@@ -5,8 +5,22 @@
     <link rel="icon" type="image/jpeg" href="{{ '/assets/img/plat.jpg' | relative_url }}">
     <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
     <link rel="alternate" type="application/atom+xml" title="Elijah Soba’s Logbook" href="{{ '/feed.xml' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/logbook.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/jekyll-pygments-themes-github.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/logbook.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/jekyll-pygments-themes-github.css' | relative_url }}"
+      id="highlight_theme_light"
+      media="(prefers-color-scheme: light)"
+    >
+    {% if site.enable_darkmode %}
+      <link
+        rel="stylesheet"
+        href="{{ '/assets/css/jekyll-pygments-themes-native.css' | relative_url }}"
+        id="highlight_theme_dark"
+        media="(prefers-color-scheme: dark)"
+      >
+      <script src="{{ '/assets/js/color-mode.js' | relative_url }}"></script>
+    {% endif %}
     {% if page.redirect %}<meta http-equiv="refresh" content="0; url={{ page.redirect | relative_url }}">{% endif %}
   </head>
   <body>
