@@ -17,8 +17,8 @@ layout: default
       class="about-photo{% if page.profile.image_circular %} circular{% endif %}"
       src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}"
       alt="{{ page.profile.alt | default: 'Elijah Soba' | escape }}"
-      width="260"
-      height="260"
+      width="320"
+      height="320"
       loading="eager"
     >
   {% else %}

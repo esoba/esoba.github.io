@@ -523,22 +523,26 @@ html[data-theme="dark"] .theme-sun {
 .about-prose {
   max-width: none;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 260px;
+  grid-template-columns: minmax(0, 1fr) clamp(240px, 28vw, 320px);
   align-items: center;
-  gap: 48px;
+  gap: 32px;
 }
 .about-copy {
   min-width: 0;
+  line-height: 1.6;
+  text-align: left;
+  text-wrap: pretty;
 }
-.about-copy > :first-child {
-  margin-top: 0;
+.about-copy p {
+  margin: 0 0 1em;
 }
 .about-copy > :last-child {
   margin-bottom: 0;
 }
 .prose .about-photo {
-  width: 260px;
-  height: 260px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
   margin: 0;
   object-fit: cover;
 }
@@ -553,7 +557,6 @@ html[data-theme="dark"] .theme-sun {
   .prose .about-photo {
     grid-row: 1;
     justify-self: center;
-    width: 200px;
-    height: 200px;
+    width: 260px;
   }
 }

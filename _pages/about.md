@@ -7,7 +7,7 @@ nav_order: 3
 section: about
 profile:
   image: blog_pic.jpeg
-  image_circular: true
+  image_circular: false
   alt: Elijah Soba
 description: Elijah Soba · Machine learning
 ---
