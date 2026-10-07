@@ -1,0 +1,4 @@
+interface:
+  display_name: "Logbook Draft"
+  short_description: "Turn technical conversations into logbook drafts"
+  default_prompt: "Use $logbook-draft to turn this technical conversation into a first-principles post draft for my logbook."

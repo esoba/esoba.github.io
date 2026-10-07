@@ -81,7 +81,40 @@ Write the entry in Markdown below the closing `---`. The `description` appears b
 
 Keep the `date` consistent with the filename. Existing posts retain their original front-matter dates and URLs. To revise an existing entry, edit its content, `title`, or `description` without renaming the file or changing its date. Published URLs use `/blog/:year/:title/`, where `:title` normally comes from the filename’s slug.
 
-Work in [\_drafts/](_drafts/) until ready to publish; preview drafts with `bundle exec jekyll serve --drafts`. For a new draft, use a filename such as `_drafts/a-lesson-from-the-work.md`. Publish it by moving it to `_posts/2026-10-07-a-lesson-from-the-work.md` and setting its publication date. Math is enabled for posts. Interactive components can be included in individual entries.
+Work in [\_drafts/](_drafts/) until ready to publish. For a new draft, use a filename such as `_drafts/a-lesson-from-the-work.md`. Publish it by moving it to `_posts/2026-10-07-a-lesson-from-the-work.md` and setting its publication date. Math is enabled for posts. Interactive components can be included in individual entries.
+
+## Capture a Codex conversation
+
+The **logbook-draft** skill turns a technical discussion into a potential post: the motivating problem, first principles, a useful example, what was established, and practical lessons or remaining questions. Invoke it in the chat containing the discussion:
+
+```text
+$logbook-draft
+```
+
+You can also give it a focus:
+
+```text
+$logbook-draft Turn our discussion of KV caching into a first-principles draft. Focus on memory use and decode latency.
+```
+
+It saves Markdown to this repository’s `_drafts` directory, even when the chat is working in a different project. It leaves the post unpublished and does not commit or push the draft unless requested for that invocation. It separates observed results from hypotheses and uses public-safe explanations rather than private work details. Review the draft before publishing it with the steps above.
+
+The installed skill lives at `~/.codex/skills/logbook-draft`; its versioned copy is [.agents/skills/logbook-draft/SKILL.md](.agents/skills/logbook-draft/SKILL.md). To install the repo copy on another machine, or refresh the installed copy after editing it, run this from the repository root:
+
+```sh
+mkdir -p ~/.codex/skills/logbook-draft
+cp -R .agents/skills/logbook-draft/. ~/.codex/skills/logbook-draft/
+```
+
+The skill’s default destination is `/Users/esoba/Desktop/personal/logbook/esoba.github.io`. Update that path in `SKILL.md` or provide a different destination in your request if the checkout moves.
+
+To preview one draft, run this from the repository root with Ruby 3.3, replacing the draft filename:
+
+```sh
+bundle exec ruby .agents/skills/logbook-draft/scripts/preview_draft.rb "$PWD/_drafts/a-lesson-from-the-work.md"
+```
+
+The helper builds the site with only that draft, checks local links, and prints the generated HTML path. Some inherited template drafts require plugins this site no longer uses, so a blanket `jekyll serve --drafts` can fail. The helper excludes those other drafts for the preview without changing their source. To view the generated preview, serve `_site` with `python3 -m http.server 4000 --directory _site` and open the printed HTML path relative to `_site` at `http://localhost:4000`.
 
 ## Save a resource
 
