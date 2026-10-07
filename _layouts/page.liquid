@@ -2,13 +2,24 @@
 layout: default
 ---
 <header class="intro compact">
-  <p class="eyebrow">Elijah Soba / {{ page.title | escape }}</p>
   <h1>
     {{ page.title | escape -}}
     <span class="accent">.</span>
   </h1>
   {% if page.description %}
-    <p class="lede">{{ page.description | escape }}</p>
+    <p class="lede{% if page.intro_full_width %} lede-wide{% endif %}">{{ page.description | escape }}</p>
   {% endif %}
 </header>
-<article class="prose">{{ content }}</article>
+<article class="prose{% if page.profile %} about-prose{% endif %}">
+  {% if page.profile.image %}
+    <img
+      class="about-photo{% if page.profile.image_circular %} circular{% endif %}"
+      src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}"
+      alt="{{ page.profile.alt | default: 'Elijah Soba' | escape }}"
+      width="260"
+      height="260"
+      loading="eager"
+    >
+  {% endif %}
+  {{ content }}
+</article>

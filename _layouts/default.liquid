@@ -19,7 +19,8 @@
         id="highlight_theme_dark"
         media="(prefers-color-scheme: dark)"
       >
-      <script src="{{ '/assets/js/color-mode.js' | relative_url }}"></script>
+      <script src="{{ '/assets/js/theme.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+      <script src="{{ '/assets/js/color-mode.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     {% endif %}
     {% if page.redirect %}<meta http-equiv="refresh" content="0; url={{ page.redirect | relative_url }}">{% endif %}
   </head>
@@ -30,6 +31,8 @@
     <footer class="shell site-footer">
       <span>Elijah Soba <span aria-hidden="true">/</span> Logbook</span>
       <div>
+        <a href="https://www.linkedin.com/in/{{ site.linkedin_username | escape }}/">LinkedIn</a>
+        <a href="mailto:{{ site.email | escape }}">Email</a>
         <a href="{{ '/feed.xml' | relative_url }}">RSS</a><a href="https://github.com/esoba">GitHub</a
         ><a href="https://github.com/alshedivat/al-folio">Built with al-folio</a>
       </div>

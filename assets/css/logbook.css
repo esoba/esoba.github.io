@@ -106,7 +106,7 @@ summary:focus-visible {
   box-shadow: 0 2px var(--accent);
 }
 .intro {
-  padding: 76px 0 68px;
+  padding: 32px 0 36px;
 }
 .eyebrow {
   color: var(--muted);
@@ -128,7 +128,7 @@ h1 {
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(58px, 8vw, 92px);
   letter-spacing: -0.055em;
-  margin: 20px 0 24px;
+  margin: 0 0 20px;
 }
 .accent {
   color: var(--accent);
@@ -244,13 +244,14 @@ h1 {
 }
 .site-footer div {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .site-footer span span {
   margin: 0 8px;
 }
 .compact {
-  padding: 64px 0 42px;
+  padding: 32px 0 28px;
 }
 .compact h1 {
   font-size: clamp(48px, 7vw, 72px);
@@ -434,7 +435,7 @@ h1 {
     font-size: 13px;
   }
   .intro {
-    padding: 48px 0;
+    padding: 24px 0 28px;
   }
   .lede {
     font-size: 16px;
@@ -512,4 +513,38 @@ html[data-theme="dark"] .theme-moon {
 }
 html[data-theme="dark"] .theme-sun {
   display: block;
+}
+
+/* Opt into a full-width introduction on Logbook and Resources. */
+.lede-wide {
+  max-width: none;
+  width: 100%;
+}
+.about-prose {
+  max-width: none;
+  display: flow-root;
+}
+.prose .about-photo {
+  float: right;
+  width: 260px;
+  height: 260px;
+  margin: 0 0 24px 36px;
+  object-fit: cover;
+}
+.about-photo.circular {
+  border-radius: 50%;
+}
+@media (max-width: 700px) {
+  .prose .about-photo {
+    width: 150px;
+    height: 150px;
+    margin: 0 0 16px 20px;
+  }
+}
+@media (max-width: 420px) {
+  .prose .about-photo {
+    float: none;
+    display: block;
+    margin: 0 0 24px auto;
+  }
 }

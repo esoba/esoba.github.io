@@ -1,25 +1,25 @@
 <header class="site-header shell">
-  <a class="site-brand" href="{{ '/' | relative_url }}"
+  <a class="site-brand" href="{{ '/' | relative_url }}?v={{ site.time | date: '%s' }}"
     ><img src="{{ '/assets/img/plat.jpg' | relative_url }}" alt="" width="36" height="36"
     ><span>Elijah Soba<span class="brand-label">Notes from the workbench</span></span></a
   >
   <nav aria-label="Main navigation">
     <a
-      href="{{ '/' | relative_url }}"
+      href="{{ '/' | relative_url }}?v={{ site.time | date: '%s' }}"
       {% if page.section == 'logbook' or page.type or page.pagination %}
         aria-current="page"
       {% endif %}
       >Logbook</a
     >
     <a
-      href="{{ '/resources/' | relative_url }}"
+      href="{{ '/resources/' | relative_url }}?v={{ site.time | date: '%s' }}"
       {% if page.section == 'resources' %}
         aria-current="page"
       {% endif %}
       >Resources</a
     >
     <a
-      href="{{ '/about/' | relative_url }}"
+      href="{{ '/about/' | relative_url }}?v={{ site.time | date: '%s' }}"
       {% if page.section == 'about' %}
         aria-current="page"
       {% endif %}

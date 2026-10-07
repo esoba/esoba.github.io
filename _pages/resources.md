@@ -3,11 +3,12 @@ layout: default
 title: Resources
 permalink: /resources/
 section: resources
+intro_full_width: true
 nav: true
 nav_order: 2
 ---
 
-<header class="intro compact"><p class="eyebrow">The resource shelf</p><h1>Resources<span class="accent">.</span></h1><p class="lede">Useful things encountered along the way.<br>A growing collection, organized by topic.</p></header>
+<header class="intro compact"><h1>Resources<span class="accent">.</span></h1><p class="lede{% if page.intro_full_width %} lede-wide{% endif %}">Useful things encountered along the way. A growing collection, organized by topic.</p></header>
 <div class="resource-layout" data-search-list data-resources>
   <aside class="resource-sidebar" aria-label="Resource topics">
     <p class="eyebrow">Browse the shelf</p>

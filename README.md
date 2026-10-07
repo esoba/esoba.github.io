@@ -15,6 +15,8 @@ Open `http://localhost:4000`. Alternatively, use `docker compose up --build` and
 
 The sun/moon button at the right of the navigation switches between light and dark mode. The site initially follows your system preference and remembers an explicit choice across pages and visits.
 
+Set `intro_full_width: true` in a page’s front matter to let its header subtext span the content width. Logbook and Resources enable this; set it to `false` for a narrower introduction. The About portrait is configured under `profile` in `_pages/about.md`. Footer contact links use `email` and `linkedin_username` from `_config.yml`.
+
 ## Write an entry
 
 Add `_posts/YYYY-MM-DD-title.md` with this front matter:

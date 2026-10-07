@@ -3,6 +3,7 @@ layout: default
 permalink: /
 title: Logbook
 section: logbook
+intro_full_width: true
 pagination:
   enabled: true
   collection: posts
@@ -13,9 +14,8 @@ pagination:
 ---
 
 <section class="intro">
-  <p class="eyebrow">A working notebook / Machine learning</p>
   <h1>Logbook<span class="accent">.</span></h1>
-  <p class="lede">Notes, experiments, and lessons from the work.<br>Written down to make the next thing a little clearer.</p>
+  <p class="lede{% if page.intro_full_width %} lede-wide{% endif %}">Notes, experiments, and lessons from the work. Written down to make the next thing a little clearer.</p>
   <div class="intro-links"><a href="{{ '/resources/' | relative_url }}">Explore the resource shelf <span aria-hidden="true">↗</span></a></div>
 </section>
 <section data-search-list aria-label="Logbook entries">

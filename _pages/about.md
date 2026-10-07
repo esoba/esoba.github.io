@@ -5,6 +5,10 @@ permalink: /about/
 nav: true
 nav_order: 3
 section: about
+profile:
+  image: pinhead.PNG
+  image_circular: true
+  alt: Elijah Soba
 description: Elijah Soba · Machine learning
 ---
 
