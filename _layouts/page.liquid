@@ -10,8 +10,9 @@ layout: default
     <p class="lede{% if page.intro_full_width %} lede-wide{% endif %}">{{ page.description | escape }}</p>
   {% endif %}
 </header>
-<article class="prose{% if page.profile %} about-prose{% endif %}">
+<article class="prose{% if page.profile.image %} about-prose{% endif %}">
   {% if page.profile.image %}
+    <div class="about-copy">{{ content }}</div>
     <img
       class="about-photo{% if page.profile.image_circular %} circular{% endif %}"
       src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}"
@@ -20,6 +21,7 @@ layout: default
       height="260"
       loading="eager"
     >
+  {% else %}
+    {{ content }}
   {% endif %}
-  {{ content }}
 </article>

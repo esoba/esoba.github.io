@@ -522,29 +522,38 @@ html[data-theme="dark"] .theme-sun {
 }
 .about-prose {
   max-width: none;
-  display: flow-root;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  align-items: center;
+  gap: 48px;
+}
+.about-copy {
+  min-width: 0;
+}
+.about-copy > :first-child {
+  margin-top: 0;
+}
+.about-copy > :last-child {
+  margin-bottom: 0;
 }
 .prose .about-photo {
-  float: right;
   width: 260px;
   height: 260px;
-  margin: 0 0 24px 36px;
+  margin: 0;
   object-fit: cover;
 }
 .about-photo.circular {
   border-radius: 50%;
 }
 @media (max-width: 700px) {
-  .prose .about-photo {
-    width: 150px;
-    height: 150px;
-    margin: 0 0 16px 20px;
+  .about-prose {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
   }
-}
-@media (max-width: 420px) {
   .prose .about-photo {
-    float: none;
-    display: block;
-    margin: 0 0 24px auto;
+    grid-row: 1;
+    justify-self: center;
+    width: 200px;
+    height: 200px;
   }
 }
