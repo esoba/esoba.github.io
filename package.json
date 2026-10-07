@@ -2,5 +2,9 @@
   "devDependencies": {
     "@shopify/prettier-plugin-liquid": "1.4.0",
     "prettier": "3.1.1"
+  },
+  "scripts": {
+    "format": "prettier _config.yml _data/{resources,topics}.yml _pages/{blog,blog-redirect,resources}.md _includes/*.liquid _layouts/*.liquid assets/css/logbook.css assets/js/logbook.js .github/workflows/{deploy,prettier}.yml README.md docs/*.md --write",
+    "format:check": "prettier _config.yml _data/{resources,topics}.yml _pages/{blog,blog-redirect,resources}.md _includes/*.liquid _layouts/*.liquid assets/css/logbook.css assets/js/logbook.js .github/workflows/{deploy,prettier}.yml README.md docs/*.md --check"
   }
 }

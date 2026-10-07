@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<header class="intro compact">
+  <a class="back-link" href="{{ '/' | relative_url }}">← Logbook</a>
+  <p class="eyebrow">Logbook / Archive</p>
+  <h1>
+    {% if page.type == 'year' %}{{ page.date | date: '%Y' }}{% else %}{{ page.title | escape }}{% endif %}
+    <span class="accent">.</span>
+  </h1>
+</header>
+{% for post in page.documents -%}
+  {%- include entry.liquid post=post -%}
+{%- endfor %}

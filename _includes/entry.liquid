@@ -1,0 +1,23 @@
+<article
+  class="entry"
+  data-search-item
+  data-search="{{ include.post.title | append: ' ' | append: include.post.description | escape }}"
+  data-tags="{{ include.post.tags | jsonify | escape }}"
+>
+  <div class="entry-date">
+    <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: '%b %d, %Y' }}</time
+    ><span>{{ include.post.content | strip_html | number_of_words | divided_by: 180 | plus: 1 }} min read</span>
+  </div>
+  <div class="entry-body">
+    <h2>
+      <a href="{{ include.post.url | relative_url }}">{{ include.post.title | escape }}</a>
+    </h2>
+    <p>{{ include.post.description | escape }}</p>
+    <div class="tags">
+      {% for tag in include.post.tags -%}
+        <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag | escape }}</a>
+      {%- endfor %}
+    </div>
+  </div>
+  <span class="entry-arrow" aria-hidden="true">↗</span>
+</article>

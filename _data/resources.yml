@@ -1,0 +1,30 @@
+# Entries migrated from the original Resources page; original discovery dates were not recorded.
+# New entries can use: added: YYYY-MM-DD and tags: [Training/Foundations, ...].
+- title: PyTorch for Deep Learning
+  url: https://github.com/mrdbourke/pytorch-deep-learning
+  description: A practical introduction to building and training models with PyTorch.
+  tags: [Training/Foundations]
+- title: LangChain
+  url: https://github.com/langchain-ai/langchain
+  description: Building applications and agents around language models.
+  tags: [Agents/Frameworks]
+- title: Effective Pandas
+  url: https://github.com/mattharrison/effective_pandas_book
+  description: Working with data in Python using pandas.
+  tags: [Training/Foundations]
+- title: Data Science IPython Notebooks
+  url: https://github.com/donnemartin/data-science-ipython-notebooks
+  description: Reference notebooks covering Python, data analysis, and machine learning.
+  tags: [Training/Foundations]
+- title: Awesome Machine Learning
+  url: https://github.com/josephmisiti/awesome-machine-learning
+  description: A collection of machine learning libraries and tools.
+  tags: [Training/Foundations, Inference/Serving]
+- title: Awesome Python
+  url: https://github.com/vinta/awesome-python
+  description: Python libraries and tools for everyday development.
+  tags: [Training/Foundations, Agents/Tool use]
+- title: Awesome MLOps
+  url: https://github.com/visenger/awesome-mlops
+  description: References for deploying and operating machine learning systems.
+  tags: [Training/Distributed training, Inference/Serving]

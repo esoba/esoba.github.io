@@ -7,7 +7,7 @@ tags: NLP AI-Trust/Safety GenAI
 categories: advanced
 ---
 
-**Will finish by 04/23/24!**
+> Work in progress. These notes will be updated as I learn more.
 
 ## Intro
 

@@ -1,1 +1,4 @@
-bundle exec jekyll build --lsi
+#!/bin/sh
+set -eu
+bundle exec jekyll build --trace
+python3 bin/check_site.py

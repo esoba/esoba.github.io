@@ -1,26 +1,15 @@
 source 'https://rubygems.org'
+ruby '~> 3.3.0'
+gem 'jekyll', '~> 4.4'
+
 group :jekyll_plugins do
-    gem 'classifier-reborn'
-    gem 'jekyll'
-    gem 'jekyll-archives'
-    gem 'jekyll-email-protect'
-    gem 'jekyll-feed'
-    gem 'jekyll-get-json'
-    gem 'jekyll-imagemagick'
-    gem 'jekyll-jupyter-notebook'
-    gem 'jekyll-link-attributes'
-    gem 'jekyll-minifier'
-    gem 'jekyll-paginate-v2'
-    gem 'jekyll-scholar'
-    gem 'jekyll-sitemap'
-    gem 'jekyll-toc'
-    gem 'jekyll-twitter-plugin'
-    gem 'jemoji'
-    gem 'mini_racer'
-    gem 'unicode_utils'
-    gem 'webrick'
+  gem 'al_folio_core', '= 1.0.15'
+  gem 'al_folio_upgrade', '= 1.0.3'
+  gem 'al_math', '= 1.0.2'
+  gem 'jekyll-archives-v2', '= 0.0.8'
+  gem 'jekyll-feed', '~> 0.17'
+  gem 'jekyll-sitemap', '~> 1.4'
+  gem 'jekyll-paginate-v2', '~> 3.0'
 end
-group :other_plugins do
-    gem 'feedjira'
-    gem 'httparty'
-end
+
+gem 'webrick', '~> 1.9'

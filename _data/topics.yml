@@ -1,0 +1,18 @@
+- name: Training
+  description: Learning representations and building models.
+  children:
+    - Foundations
+    - Fine-tuning
+    - Distributed training
+- name: Inference
+  description: Running models and understanding their behavior.
+  children:
+    - Serving
+    - Optimization
+    - Evaluation
+- name: Agents
+  description: Connecting models to tools and workflows.
+  children:
+    - Frameworks
+    - Tool use
+    - Retrieval
