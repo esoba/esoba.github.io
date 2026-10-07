@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+
+
+
+<!-- Standard metadata -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>
+  
+  
+    
+      How do pre-trained sentence embeddings work? | Elijah Soba’s Logbook
+    
+  
+</title>
+<meta name="author" content="Elijah Soba">
+<meta name="description" content="What does it mean to embed a sentence?">
+
+
+
+
+
+
+  <!-- OpenGraph -->
+  <meta property="og:site_name" content="Elijah Soba’s Logbook">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Elijah Soba’s Logbook | How do pre-trained sentence embeddings work?">
+  <meta property="og:url" content="https://esoba.github.io/blog/2024/how-do-pre-trained-embeddings-work/">
+  <meta property="og:description" content="What does it mean to embed a sentence?">
+  
+    
+    
+    <meta property="og:image" content="https://esoba.github.io/assets/img/plat.jpg">
+  
+  <meta property="og:locale" content="en">
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How do pre-trained sentence embeddings work?">
+  <meta name="twitter:description" content="What does it mean to embed a sentence?">
+  
+    <meta name="twitter:image" content="https://esoba.github.io/assets/img/plat.jpg">
+  
+  
+
+
+
+
+    <link rel="icon" type="image/jpeg" href="/assets/img/plat.jpg">
+    <link rel="canonical" href="https://esoba.github.io/blog/2024/how-do-pre-trained-embeddings-work/">
+    <link rel="alternate" type="application/atom+xml" title="Elijah Soba’s Logbook" href="/feed.xml">
+    <link rel="stylesheet" href="/assets/css/logbook.css?v=1791410859">
+    <link
+      rel="stylesheet"
+      href="/assets/css/jekyll-pygments-themes-github.css"
+      id="highlight_theme_light"
+      media="(prefers-color-scheme: light)"
+    >
+    
+      <link
+        rel="stylesheet"
+        href="/assets/css/jekyll-pygments-themes-native.css"
+        id="highlight_theme_dark"
+        media="(prefers-color-scheme: dark)"
+      >
+      <script src="/assets/js/theme.js?v=1791410859"></script>
+      <script src="/assets/js/color-mode.js?v=1791410859"></script>
+    
+    
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header shell">
+  <a class="site-brand" href="/?v=1791410859"
+    ><img src="/assets/img/plat.jpg" alt="" width="36" height="36"
+    ><span>Elijah Soba<span class="brand-label">Notes from the workbench</span></span></a
+  >
+  <nav aria-label="Main navigation">
+    <a
+      href="/?v=1791410859"
+      
+        aria-current="page"
+      
+      >Logbook</a
+    >
+    <a
+      href="/resources/?v=1791410859"
+      
+      >Resources</a
+    >
+    <a
+      href="/about/?v=1791410859"
+      
+      >About</a
+    >
+    
+      <button id="light-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" hidden>
+        <svg
+          class="theme-moon"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M20.9 13.2A9 9 0 0 1 10.8 3.1a9 9 0 1 0 10.1 10.1Z"></path>
+        </svg>
+        <svg
+          class="theme-sun"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+        </svg>
+      </button>
+    
+  </nav>
+</header>
+
+    <main id="main" class="shell"><article>
+  <header class="intro compact post-heading">
+    <a class="back-link" href="/">← Logbook</a>
+    <p class="eyebrow">
+      <time datetime="2024-02-26T09:00:10-08:00">February 26, 2024</time> /
+      6 min read
+    </p>
+    <h1>How do pre-trained sentence embeddings work?</h1>
+    <p class="lede">What does it mean to embed a sentence?</p>
+    <div class="tags">
+      <a href="/blog/tag/nlp">NLP</a><a href="/blog/tag/genai">GenAI</a>
+    </div>
+  </header>
+  <div class="prose"><h2 id="intro">Intro</h2>
+
+<p>When I first got into NLP, my first couple projects involved building some basic classification, clustering, and RAG algorithms using <a href="https://www.sbert.net/">sentence embeddings</a> or <a href="https://platform.openai.com/docs/guides/embeddings">OpenAI embeddings</a>. I think this was a great start because it made me realize that <a href="">NLP isn’t much different than other ML areas</a>, but as I kept going down the NLP rabbit hole I realized I didn’t truly understand these embeddings.</p>
+
+<p>Looking back, I don’t blame myself too much for my lack of understanding because word embeddings are a lot more intuitive. Without diving into specifics (which can be found <a href="">here</a>), word embeddings are created by analyzing the relationships between words and surrounding context in a corpus. The output of a perfect word embedding model are vectors whose geometric similarity (like cosine similarity) are representative of their semantic similarity. Thus, we can expect words with similar meanings to be closer together in the vector space.</p>
+
+<p>Even though I understood how word embeddings worked, I struggled with sentences for a couple different reasons. These were some of my qualms:</p>
+<ul>
+  <li>Can’t there be an infinite number of sentences constructed from words in a corpus?</li>
+  <li>How can you embed paragraphs?</li>
+  <li>Even if you used attention to update vector representations, how do you combine them?</li>
+</ul>
+
+<h2 id="pooling">Pooling</h2>
+
+<p>You may have heard of pooling before in other ML contexts, particularly in Computer Vision where pooling refers to downsampling convolutional kernel output (aka feature maps). You perform pooling for a couple different reasons, primarily to:</p>
+<ul>
+  <li>Reduce dimensionality (makes computation faster)</li>
+  <li>Promote translation invariance (makes network less sensitive to feature location)</li>
+  <li>Abstract/Consolidate features (makes network focus on large patterns vs local details)</li>
+</ul>
+
+<p>In NLP pooling has a different meaning, but can be thought of in the same way as the CV case. Pooling is a method of converting a sequence of word embeddings into a singular embedding that represents primary features of the entire sequence (aka downsampling!). As opposed to Convolutional Neural Networks where pooling is applied after every convolution layer, NLP pooling is only applied at the very end of self-attention blocks. Sentence embeddings are just the output of the pooling operation on context-aware word embeddings (typically from the final attention layer/block).</p>
+
+<p>Like in CV, there are different pooling methods that can be employed to get a representative embedding that captures the meaning of a sentence. The most common method is CLS pooling. In this method, a special classification token (usually called <CLS> or <s>) is appended to the beginning of every sentence/phrase/sequence of tokens the model is trained on. This token goes through the attention mechanism and is trained like how all other tokens would be (with the exception that the CLS token is never masked). Thus, it also has a representation that can be updated with contextually aware information. The CLS token is like the innocent bystander of the attention process - it is updated with relevant information but not necessarily apart of the sentence itself. Because of this, the representation of the CLS token has been chosen as a way to pool all of the word embeddings from a sentence. The idea is that the CLS token contains the same sentence level representation without being biased by any local semantics. A little more on BERT, the go-to language model for explaining/performing the state of the art, can be found [here]().</s></CLS></p>
+
+<p>To go back to CV for a moment, this is a bit analogous to max pooling in the sense that there are other pooling options but research consistently uses one method. Some other methods for pooling in NLP include averaging all of the embeddings, taking the max value at every index across all embeddings, etc. I have not gone into full depth on if a particular pooling method is preferred for a particular usecase, but I suspect there wouldn’t be much of a difference (especially if the embedding is going to be fed into another neural network).</p>
+
+<p>NOTE: Because attention (at its most basic form) is a context-aware weighted average, CLS pooling can be thought of as a weighted average of token embeddings. What’s nice is that the computation/weights for that average fall out naturally by virtue of passing text through the model.</p>
+
+<p>NOTE: Not every language model has a CLS token with its pre-training objective, so if you care to know the behind the scenes on how the model you are using does its embedding I would suggest reading through HuggingFace/architecture diagrams.</p>
+
+<h2 id="answers-to-my-previous-qualms">Answers to my previous qualms</h2>
+<ol>
+  <li>Can’t there be an infinite number of sentences constructed from words in a corpus?</li>
+</ol>
+
+<p>Technically yes if we define a sentence to be a length-unrestricted sequence of words (tokens). I can see the confusion where the thought process is “there are an infinite number of combinations so how can an infinite combination fit in one embedding space”. My counter to that is unlike word embeddings, they do not all sit in one space. There is no sentence embedding space like words, it is more so sentence embeddings are a function of embeddings that live in the word embedding space. That function is the pooling operation and it is dependent on the model you are getting embeddings from.</p>
+
+<ol>
+  <li>How can you embed paragraphs?</li>
+</ol>
+
+<p>Same way you would a sentence (aka pooling). A period (what delimits sentences from each other) is just a token, there is nothing special about it from the perspective of a language model. Assuming the paragraph you want to embed is not larger than the context limit of the language model you are passing it to, the process would be the exact same for a singular sentence.</p>
+
+<ol>
+  <li>Even if you used attention to update vector representations, how do you combine them?</li>
+</ol>
+
+<p>Depends on the pooling method you choose. The default method (most common) is just to take the embedding of the classification token (usually <cls> or <s>) from a sequence. The idea is that the classification token captures all of the relevant sequence level information and it's embedding is updated just like the rest of the word embeddings. Another technique is to average the embeddings of all the words in the sentence. There is no consensus on which method to choose, but for models trained on classification tasks its best to just use the cls representation.</s></cls></p>
+</div>
+</article>
+</main>
+    <footer class="shell site-footer">
+      <span>Elijah Soba <span aria-hidden="true">/</span> Logbook</span>
+      <div>
+        <a href="https://www.linkedin.com/in/esoba/">LinkedIn</a>
+        <a href="mailto:esoba@umich.edu">Email</a>
+        <a href="/feed.xml">RSS</a><a href="https://github.com/esoba">GitHub</a
+        ><a href="https://github.com/alshedivat/al-folio">Built with al-folio</a>
+      </div>
+    </footer>
+    <script src="/assets/js/logbook.js" defer></script>
+    
+<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script>
+<script src="/assets/al_math/js/mathjax-setup.js"></script>
+
+  </body>
+</html>

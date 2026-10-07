@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+
+
+
+<!-- Standard metadata -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>
+  
+  
+    
+      I don't use SQL as much as I should | Elijah Soba’s Logbook
+    
+  
+</title>
+<meta name="author" content="Elijah Soba">
+<meta name="description" content="Intro SQL guide for people who should know SQL">
+
+
+
+
+
+
+  <!-- OpenGraph -->
+  <meta property="og:site_name" content="Elijah Soba’s Logbook">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Elijah Soba’s Logbook | I don't use SQL as much as I should">
+  <meta property="og:url" content="https://esoba.github.io/blog/2024/i-dont-use-sql-but-i-should/">
+  <meta property="og:description" content="Intro SQL guide for people who should know SQL">
+  
+    
+    
+    <meta property="og:image" content="https://esoba.github.io/assets/img/plat.jpg">
+  
+  <meta property="og:locale" content="en">
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="I don't use SQL as much as I should">
+  <meta name="twitter:description" content="Intro SQL guide for people who should know SQL">
+  
+    <meta name="twitter:image" content="https://esoba.github.io/assets/img/plat.jpg">
+  
+  
+
+
+
+
+    <link rel="icon" type="image/jpeg" href="/assets/img/plat.jpg">
+    <link rel="canonical" href="https://esoba.github.io/blog/2024/i-dont-use-sql-but-i-should/">
+    <link rel="alternate" type="application/atom+xml" title="Elijah Soba’s Logbook" href="/feed.xml">
+    <link rel="stylesheet" href="/assets/css/logbook.css?v=1791410859">
+    <link
+      rel="stylesheet"
+      href="/assets/css/jekyll-pygments-themes-github.css"
+      id="highlight_theme_light"
+      media="(prefers-color-scheme: light)"
+    >
+    
+      <link
+        rel="stylesheet"
+        href="/assets/css/jekyll-pygments-themes-native.css"
+        id="highlight_theme_dark"
+        media="(prefers-color-scheme: dark)"
+      >
+      <script src="/assets/js/theme.js?v=1791410859"></script>
+      <script src="/assets/js/color-mode.js?v=1791410859"></script>
+    
+    
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header shell">
+  <a class="site-brand" href="/?v=1791410859"
+    ><img src="/assets/img/plat.jpg" alt="" width="36" height="36"
+    ><span>Elijah Soba<span class="brand-label">Notes from the workbench</span></span></a
+  >
+  <nav aria-label="Main navigation">
+    <a
+      href="/?v=1791410859"
+      
+        aria-current="page"
+      
+      >Logbook</a
+    >
+    <a
+      href="/resources/?v=1791410859"
+      
+      >Resources</a
+    >
+    <a
+      href="/about/?v=1791410859"
+      
+      >About</a
+    >
+    
+      <button id="light-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" hidden>
+        <svg
+          class="theme-moon"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M20.9 13.2A9 9 0 0 1 10.8 3.1a9 9 0 1 0 10.1 10.1Z"></path>
+        </svg>
+        <svg
+          class="theme-sun"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+        </svg>
+      </button>
+    
+  </nav>
+</header>
+
+    <main id="main" class="shell"><article>
+  <header class="intro compact post-heading">
+    <a class="back-link" href="/">← Logbook</a>
+    <p class="eyebrow">
+      <time datetime="2024-02-26T09:00:10-08:00">February 26, 2024</time> /
+      12 min read
+    </p>
+    <h1>I don&#39;t use SQL as much as I should</h1>
+    <p class="lede">Intro SQL guide for people who should know SQL</p>
+    <div class="tags">
+      <a href="/blog/tag/cs-skills">cs-skills</a>
+    </div>
+  </header>
+  <div class="prose"><h2 id="intro">Intro</h2>
+
+<p>The title kind of speaks for itself, but I admittedly haven’t had many opportunities to work with SQL. Because I am in the ML field and also because my technical title for work is Data Scientist, it is assumed that I know SQL and use it on a day to day basis. The truth is, I am often looking at open source datasets or getting data handed to me (a bit privileged, I know). I say I know SQL, but really I only know the basics and don’t get to practice these skills very often. Luckily, I had some exposure to it in college and know Pandas pretty well so I can dig through some documentation and understand whats going on.</p>
+
+<p>The guide below is for people who are in my shoes - ML practicioners who should know SQL just by virtue of just being in the field. Almost every Data Science, Data Engineer, Machine Learning Engineer job posting I’ve seen has some sort of requirement on SQL, so even if you never use SQL it will be good to know.</p>
+
+<p>I got a lot of this material from random sources and YouTube videos (all will be linked below), but I think the best resource for my learning was <a href="https://selectstarsql.com/">select star sql</a>. I have no affiliation with the person who made this site, but going through his chapters was super intuitive and interactive. His book gives you the ability to run queries in real time (I’ll just be showing code snippets here) which really solidified my learning.</p>
+
+<p>Also because I need some examples to actually show SQL in action, I opted to test out the knowledge on a select number of hackerrank SQL questions. I am not a fan of companies using hackerrank to weed out applicants (which I talk about in a <a href="https://selectstarsql.com/">blog post</a>), but for the sake of building skills I think it is pretty useful (especially here). There will be some basic examples in the sections describing core concepts, and harder examples towards the end</p>
+
+<h2 id="different-types-of-sql">Different types of SQL</h2>
+
+<p>Whenver I see SQL in the wild, its always followed by some modifier: PostgreSQL, MySQL, SQLite (what I first learned in college), etc. I never really understood the difference, but its about time I (we) do.</p>
+
+<p>The way I have come to understand the differences is that SQL is a standardized language used to manage/manipulate relational databases. All of the other flavors (like the ones that I listed above) is a specific relational database management system (RDBMS) that uses SQL as its querying language. The different flavors can also provide additional features/functionalities specific to the database system.</p>
+
+<p>As one <a href="https://www.reddit.com/r/SQL/comments/e0ao31/newbie_what_the_difference_between_sql_and_mysql/">redditor</a> put it, SQL = the English language, MySQL (or any other flavor) = a novel that was written using the English language. In terms of the additional functionalities mentioned above, you can think of a huge chunk (lets call it 95%) of the base functionality being the same and 5% being flavor specific.</p>
+
+<p>For the guide, I am going to go through SQLite because it is the <a href="https://www.sqlite.org/mostdeployed.html">most widely deployed</a> and the one I am most familiar with. Assuming the information I just mentioned above is true, the knowledge below should be widely applicable to all flavors.</p>
+
+<h2 id="convention">Convention</h2>
+<p>If you see SQL in the wild, its typically written out in a pretty consistent (and human readable) format. The main conventions in SQL are the following:</p>
+<ul>
+  <li>SQL specific keywords are capitalized, while database schema specific keywords (like table names) are lowercase.
+    <ul>
+      <li>Some flavors of SQL can be case sensitive, verify that the flavor doesn’t have a restriction on this</li>
+    </ul>
+  </li>
+  <li>As long as you don’t smush two words together, SQL is not very sensitive to whitespace. Improve readability by putting each command on a new line</li>
+  <li>Arithmetic stays in integer form unless .0 is added to the hardcoded numbers. A common trick is to multiply a number by 1.0 to make it decimal</li>
+  <li>Strings are denoted by single quotes</li>
+  <li>Semicolons at the end of queries separate individual queries from each other</li>
+</ul>
+
+<h2 id="basic-commands">Basic commands</h2>
+
+<p>SELECT:</p>
+<ul>
+  <li>Indicates what you want to output</li>
+  <li>The * wildcard means “all columns”</li>
+  <li>You can make your own columns from some combination of other columns</li>
+  <li>You can use the AS keyword to alias some column</li>
+</ul>
+
+<p>In pandas, this is analogous to df[‘column_name’] or just simple look up. If you wanted to combine different columns, you could index columns and do whatever operation you want. For example df[‘col1’] + df[‘col2’]. The aliasing comes from whatever you decide to name the resultant dataframe</p>
+
+<p>FROM:</p>
+<ul>
+  <li>Indicates what table in the database should be used</li>
+  <li>Technically don’t need the FROM block if nothing from the table is being used</li>
+</ul>
+
+<p>With pandas it is assumed that the dataframe you have is not connected to multiple potential dataframes so the FROM keyword does not have a good analog.</p>
+
+<p>WHERE:</p>
+<ul>
+  <li>Indicates what filters should be applied before outputting</li>
+  <li>Done with boolean indexing using operators like &gt;, = (not ==), etc.</li>
+  <li>For strings, SQL supports a couple different, more powerful operators
+    <ul>
+      <li>Use the LIKE to do wildcard searches</li>
+      <li>LIKE ‘%val’ means any combo of strings + val</li>
+      <li>LIKE ‘_val’ means single character match + val</li>
+      <li>See documenation for more like this</li>
+    </ul>
+  </li>
+  <li>To determine is something is NULL, use the keyword IS (val IS null)</li>
+</ul>
+
+<p>This is equivalent to something like df[df[‘col1’] &lt; 5] except of course you can replace &lt; with any operator and 5 with any desired filter value. Like in pandas, it is up to you to make sure the operator + filter value you choose is in line with the datatype you are dealing with (for example if col1 was all string data, the expression above wouldnt make sense).</p>
+
+<p>NOTE: The mental model I like to keep for WHERE (or pandas boolean indexing) is for loops. I imagine every WHERE clause or df[df[‘col1’] &lt; 5] as being:</p>
+<ul>
+  <li>for row in df (or table) if row meets clause output row else skip</li>
+</ul>
+
+<p><a href="https://www.hackerrank.com/challenges/japanese-cities-attributes/problem">EXAMPLE</a></p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> 
+<span class="k">FROM</span> <span class="n">CITY</span> 
+<span class="k">WHERE</span> <span class="n">countrycode</span> <span class="o">=</span> <span class="s1">'JPN'</span>
+</code></pre></div></div>
+
+<p>ORDER BY:</p>
+<ul>
+  <li>Indicates the ordering of output based on a colum</li>
+  <li>You can order by multiple things by separating columns by commas</li>
+</ul>
+
+<p>In pandas, this is like calling the sort_values() method</p>
+
+<p>LIMIT:</p>
+<ul>
+  <li>Indicates how many results should be output</li>
+</ul>
+
+<p>This is equivalent to making your query in pandas and adding [:limit number] or [limit number:]. Essentially indexing the final output.</p>
+
+<h2 id="aggregating">Aggregating</h2>
+
+<p>NOTE: The flavor of SQL you use may have different syntax than the aggregators here or additional aggregate functionality. Refer to the documentation for your specific flavor for details. For completion, below are some of the most common ones</p>
+
+<p>COUNT:</p>
+<ul>
+  <li>Counts the number of non-null rows in a column</li>
+  <li>Can use COUNT(*) to get the length of an entire table
+    <ul>
+      <li>Counts rows as long as any one of their columns is non-null</li>
+    </ul>
+  </li>
+</ul>
+
+<p>DISTINCT:</p>
+<ul>
+  <li>Returns only unique parts of a column and no duplicates</li>
+</ul>
+
+<p>SUM/MIN/MAX/AVG:</p>
+<ul>
+  <li>Does the aggregation specified</li>
+</ul>
+
+<p>LENGTH/LEN:</p>
+<ul>
+  <li>Returns the number of characters in a string</li>
+</ul>
+
+<p><a href="https://www.hackerrank.com/challenges/weather-observation-station-18/">EXAMPLE</a></p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">ROUND</span><span class="p">(</span><span class="k">MAX</span><span class="p">(</span><span class="n">lat_n</span><span class="p">)</span> <span class="o">-</span> <span class="k">MIN</span><span class="p">(</span><span class="n">lat_n</span><span class="p">)</span> <span class="o">+</span> <span class="k">MAX</span><span class="p">(</span><span class="n">long_w</span><span class="p">)</span> <span class="o">-</span> <span class="k">MIN</span><span class="p">(</span><span class="n">long_w</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">STATION</span>
+</code></pre></div></div>
+
+<p>NOTE: In most cases, if you try to output a column and an aggregation from SELECT you will get just one output. The column output will be some singular random output instead. This is because SQL doesn’t know how to output a singular value (which the aggregator returns) with multiple values from the specified column</p>
+
+<p>You can do aggregating either on the entire table, or a subset of the table (more info in the nested query section)</p>
+
+<h2 id="group-by">Group By</h2>
+<p>GROUP BY:</p>
+<ul>
+  <li>Gathers identical column values to allow aggregators to be used on them</li>
+  <li>Always comes after a WHERE block</li>
+</ul>
+
+<p>This is pretty much identical to pandas groupby.</p>
+
+<p>HAVING:</p>
+<ul>
+  <li>Allows you to filter after output after performing group by logic</li>
+  <li>Essentially the WHERE clause, except specifically for groupby outputs
+    <ul>
+      <li>WHERE happens before grouping and aggregation</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a href="https://www.hackerrank.com/challenges/earnings-of-employees/problem">Example</a></p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">salary</span><span class="o">*</span><span class="n">months</span> <span class="k">as</span> <span class="n">tot_sal</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">employee</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">tot_sal</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">tot_sal</span> <span class="k">DESC</span>
+<span class="k">LIMIT</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<p>NOTES: 
+GROUP BY breaks the NOTE above because if you SELECT a column and some aggregate when a groupby is introduced, the aggregate will be performed first allowing each column to have some number associated with it. This is of course assuming that you are consistent with what you are grouping by (For example, SELECT <strong>city</strong>, COUNT(city) FROM city_table GROUP BY <strong>city</strong>)</p>
+
+<p>If you group by multiple objects and there is nothing to display for a particular group, nothing will be returned. I think the best explanation for this can be found in the (decade age example)[https://selectstarsql.com/longtail.html]. Essentially if (group1, group2) has an aggregation that doesnt exist, it will not show up in the output.</p>
+
+<p>In pandas, you get some group by functionality out of the box. For example, the value_counts() method is really just a short hand for groupby(‘column’).size() (or .count() if you do not want to consider NaN values). I am not sure if you get the same OOB funcionality with SQL</p>
+
+<h2 id="nested-queriessubsets">Nested Queries/Subsets</h2>
+
+<p>CASE WHEN:</p>
+<ul>
+  <li>A way to introduce if-else logic into SQL</li>
+  <li>The syntax is CASE WHEN clause THEN result …(more statements here)… ElSE result END (END needed to conclude statement)</li>
+</ul>
+
+<p>You can use this to create subsets of the table in a specified way (you get to specify each case or if statement)</p>
+
+<p><a href="https://www.hackerrank.com/challenges/binary-search-tree-1/problem?isFullScreen=true">EXAMPLE</a>:</p>
+
+<p>Without CASE WHEN</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">N</span><span class="p">,</span> <span class="s1">'Leaf'</span>
+<span class="k">FROM</span> <span class="n">BST</span>
+<span class="k">WHERE</span> <span class="n">N</span> <span class="k">NOT</span> <span class="k">IN</span> <span class="p">(</span><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="n">P</span> <span class="k">FROM</span> <span class="n">BST</span> <span class="k">WHERE</span> <span class="n">P</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">)</span>
+
+<span class="k">UNION</span>
+
+<span class="k">SELECT</span> <span class="n">N</span><span class="p">,</span> <span class="s1">'Inner'</span>
+<span class="k">FROM</span> <span class="n">BST</span>
+<span class="k">WHERE</span> <span class="n">N</span> <span class="k">IN</span> <span class="p">(</span><span class="k">SELECT</span> <span class="n">P</span> <span class="k">FROM</span> <span class="n">BST</span> <span class="k">WHERE</span> <span class="n">P</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">AND</span> <span class="n">P</span> <span class="o">!=</span> <span class="p">(</span><span class="k">SELECT</span> <span class="n">N</span> <span class="k">FROM</span> <span class="n">BST</span> <span class="k">WHERE</span> <span class="n">P</span> <span class="k">is</span> <span class="k">null</span><span class="p">))</span>
+
+<span class="k">UNION</span>
+
+<span class="k">SELECT</span> <span class="n">N</span><span class="p">,</span> <span class="s1">'Root'</span>
+<span class="k">FROM</span> <span class="n">BST</span>
+<span class="k">WHERE</span> <span class="n">P</span> <span class="k">is</span> <span class="k">null</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">N</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>WITH CASE WHEN</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">N</span><span class="p">,</span> 
+<span class="k">CASE</span> 
+    <span class="k">WHEN</span> <span class="n">P</span> <span class="k">IS</span> <span class="k">null</span> <span class="k">THEN</span> <span class="s1">'Root'</span>
+    <span class="k">WHEN</span> <span class="n">N</span> <span class="k">NOT</span> <span class="k">IN</span> <span class="p">(</span><span class="k">SELECT</span> <span class="n">P</span> <span class="k">FROM</span> <span class="n">BST</span> <span class="k">WHERE</span> <span class="n">P</span> <span class="k">is</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">)</span> <span class="k">THEN</span> <span class="s1">'Leaf'</span>
+    <span class="k">ELSE</span> <span class="s1">'Inner'</span>
+<span class="k">END</span>
+    
+<span class="k">FROM</span> <span class="n">BST</span> 
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">N</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Sometimes, you need to aggregate both within groups and across the entire dataset. Unfortunately, this cannot be done at the same time with a single query. To bypass this, you can create a query that generates a subset of the data, and wrap it in parenthesees to isolate it from the rest of the query.</p>
+
+<h2 id="joins">Joins</h2>
+
+<p>LEFT/RIGHT/OUTER/INNER JOIN:</p>
+<ul>
+  <li>Joins two tables together based on the specified <a href="https://www.w3schools.com/sql/sql_join.asp">JOIN type</a></li>
+  <li>By default, using the JOIN keyword will do an INNER JOIN</li>
+  <li>You typically join on a key that is the same across different tables
+    <ul>
+      <li>FROM table1 JOIN table 2 on table1.uid = table2.uid</li>
+    </ul>
+  </li>
+  <li>You can join a table with itself (Useful when you make subsets w/different columns)</li>
+  <li>You can alias without using AS</li>
+  <li>You can optionally join on another boolean operator (useful if you don’t care about duplicates)</li>
+</ul>
+
+<p><a href="https://www.hackerrank.com/challenges/asian-population/problem?isFullScreen=true">EXAMPLE</a>:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="k">SUM</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">population</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">city</span> <span class="k">c</span>
+<span class="k">JOIN</span> <span class="n">country</span> <span class="n">co</span> <span class="k">ON</span> <span class="k">c</span><span class="p">.</span><span class="n">countrycode</span> <span class="o">=</span> <span class="n">co</span><span class="p">.</span><span class="n">code</span>
+<span class="k">WHERE</span> <span class="n">co</span><span class="p">.</span><span class="n">continent</span> <span class="o">=</span> <span class="s1">'Asia'</span>
+</code></pre></div></div>
+<p>NOTE: As mentioned above, we aliased city and country without specifying AS</p>
+
+<h2 id="other-important-keywords">Other important keywords</h2>
+<p>RIGHT/LEFT:</p>
+<ul>
+  <li>Extract characters from a string starting from either left or right - LEFT/RIGHT(“my_str”, # char to extract)</li>
+</ul>
+
+<p><a href="https://www.hackerrank.com/challenges/weather-observation-station-6/problem?isFullScreen=true">Example</a>:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="n">city</span>
+<span class="k">FROM</span> <span class="n">station</span>
+<span class="k">WHERE</span> <span class="k">LEFT</span><span class="p">(</span><span class="n">city</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">in</span> <span class="p">(</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'e'</span><span class="p">,</span> <span class="s1">'i'</span><span class="p">,</span> <span class="s1">'o'</span><span class="p">,</span> <span class="s1">'u'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>SUBSTR:</p>
+<ul>
+  <li>Extract a substring from a string -  SUBSTR(“my_str”, start_position, # of extract characters)</li>
+  <li>Can modify the above example to use substr instead of left</li>
+</ul>
+
+<p>CONCAT:</p>
+<ul>
+  <li>Concatentate strings together - CONCAT (string1, string2, …)</li>
+</ul>
+
+<p><a href="https://www.hackerrank.com/challenges/the-pads/problem?isFullScreen=true">Example</a>:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">CONCAT</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s1">'('</span><span class="p">,</span> <span class="k">LEFT</span><span class="p">(</span><span class="n">occupation</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s1">')'</span><span class="p">)</span> <span class="k">as</span> <span class="n">paren</span>
+<span class="k">FROM</span> <span class="n">occupations</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">name</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="n">CONCAT</span><span class="p">(</span><span class="s1">'There are a total of '</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="s1">' '</span><span class="p">,</span> <span class="k">LOWER</span><span class="p">(</span><span class="n">occupation</span><span class="p">),</span> <span class="s1">'s.'</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">occupations</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">occupation</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>WITH:</p>
+<ul>
+  <li>Define a subset of a table to reference later - WITH reference_name AS (Subtable query)</li>
+</ul>
+
+<p>UNION:</p>
+<ul>
+  <li>Combine the result set of two or more SELECT statements</li>
+</ul>
+
+<p>BETWEEN:</p>
+<ul>
+  <li>Operator that selects values within a given range - col BETWEEN val1 AND val2</li>
+</ul>
+
+<p><a href="https://www.hackerrank.com/challenges/the-report/problem?isFullScreen=true">EXAMPLE</a></p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">WITH</span> <span class="n">comb</span> <span class="k">AS</span> 
+<span class="p">(</span><span class="k">SELECT</span> <span class="n">s</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="k">g</span><span class="p">.</span><span class="n">grade</span><span class="p">,</span> <span class="n">s</span><span class="p">.</span><span class="n">marks</span>
+<span class="k">FROM</span> <span class="n">students</span> <span class="n">s</span>
+<span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">grades</span> <span class="k">g</span> 
+<span class="k">ON</span> <span class="n">s</span><span class="p">.</span><span class="n">marks</span> <span class="k">BETWEEN</span> <span class="k">g</span><span class="p">.</span><span class="n">min_mark</span> <span class="k">AND</span> <span class="k">g</span><span class="p">.</span><span class="n">max_mark</span><span class="p">)</span>
+
+<span class="p">(</span><span class="k">SELECT</span> <span class="n">name</span><span class="p">,</span> <span class="n">grade</span><span class="p">,</span> <span class="n">marks</span>
+<span class="k">FROM</span> <span class="n">comb</span>
+<span class="k">WHERE</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">)</span>
+
+<span class="k">UNION</span> 
+
+<span class="p">(</span><span class="k">SELECT</span> <span class="k">NULL</span> <span class="k">as</span> <span class="n">name</span><span class="p">,</span> <span class="n">grade</span><span class="p">,</span> <span class="n">marks</span>
+<span class="k">FROM</span> <span class="n">comb</span>
+<span class="k">WHERE</span> <span class="n">grade</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">)</span>
+
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">grade</span> <span class="k">DESC</span><span class="p">,</span> <span class="n">name</span> <span class="k">ASC</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="more-examples">More Examples</h2>
+<p>Coming soon!</p>
+
+<h2 id="note-on-llms-for-sql">Note on LLMs for SQL</h2>
+
+<p>Because the base functionality of SQL is very close to written language, it is is the perfect candidate for a task that can be done with Large Language Models (LLMs). For the examples above in hackerrank, GPT-4 was able to reproduce most of the answers I wrote by just providing a description of the task and database schema. The ones that it did get wrong could easily be fixed by understanding all of the concepts above. There are also some LLMs out there that were fine-tuned</p>
+
+<h2 id="sources">Sources</h2>
+<p><a href="https://selectstarsql.com/">select star sql</a>
+<a href="https://www.youtube.com/watch?v=gm6tNK_iOHs&amp;list=PLR0triVyTrBWOLNu3ato7Y9hnGVyhTe1c">basic sql YT playlist</a>
+<a href="https://www.youtube.com/watch?v=zsjvFFKOm3c&amp;pp=ygUMc3FsIGZpcmVzaGlw">SQL in 100 seconds</a>
+<a href="https://www.youtube.com/watch?v=vpzO8QTrgbc&amp;pp=ygUOc3FsIGhhY2tlcnJhbms%3D">guy answers all hackerrank sql questions</a></p>
+
+</div>
+</article>
+</main>
+    <footer class="shell site-footer">
+      <span>Elijah Soba <span aria-hidden="true">/</span> Logbook</span>
+      <div>
+        <a href="https://www.linkedin.com/in/esoba/">LinkedIn</a>
+        <a href="mailto:esoba@umich.edu">Email</a>
+        <a href="/feed.xml">RSS</a><a href="https://github.com/esoba">GitHub</a
+        ><a href="https://github.com/alshedivat/al-folio">Built with al-folio</a>
+      </div>
+    </footer>
+    <script src="/assets/js/logbook.js" defer></script>
+    
+<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script>
+<script src="/assets/al_math/js/mathjax-setup.js"></script>
+
+  </body>
+</html>
