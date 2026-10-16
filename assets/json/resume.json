@@ -1,0 +1,141 @@
+{
+  "basics": {
+    "name": "Elijah Soba",
+    "image": "",
+    "email": "esoba@umich.edu",
+    "phone": "(201) 427-0287",
+    "url": "https://esoba.github.io/",
+    "areas of interest": "Multimodal, Transfer Learning, NLP, Reinforcement Learning, Computer Vision",
+    "location": {
+      "city": "Arlington",
+      "countryCode": "US",
+      "region": "Virginia"
+    },
+    "profiles": [
+      {
+        "network": "linkedin",
+        "username": "esoba",
+        "url": "https://linkedin.com/in/esoba"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Deloitte",
+      "position": "Associate Data Scientist",
+      "startDate": "2022-07-11",
+      "endDate": "",
+      "summary": "ML research in the Deloitte AI Center of Excellence",
+      "highlights": ["Anomaly Detection, Graph ML, Metric Learning, LLM finetuning, Information Retreival"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Michigan",
+      "location": "Ann Arbor, Michigan",
+      "area": "Biomedical Engineering, Signal & Image Processing and Machine Learning",
+      "url": "https://ece.engin.umich.edu/research/research-areas/signal-image-processing-and-machine-learning/",
+      "studyType": "Bachelors, Masters",
+      "startDate": "2017-09",
+      "endDate": "2022-05",
+      "courses": ["Data Structures & Algorithms", "Matrix Methods for Machine Learning", "Probability & Random Processes", "Deep Learning for Computer Vision", "Machine Learning Design Lab"]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Programming",
+      "keywords": [
+        "Python",
+        "C++",
+        "SQL",
+        "Julia",
+        "Scala",
+        "MATLAB"
+      ]
+    }, 
+    {
+      "category": "Machine Learning Packages",
+      "keywords": [
+        "Pytorch",
+        "Tensorflow",
+        "JAX",
+        "LangChain",
+        "Scikit-Learn",
+        "NetworkX",
+        "NumPy",
+        "Pandas"
+      ]
+    }, 
+        {
+      "category": "Cloud Computing/Big Data",
+      "keywords": [
+        "AWS (EC2, ECR, SageMaker, API Gateway)",
+        "Docker",
+        "Kubeflow",
+        "Elasticsearch",
+        "Apache Spark"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Cloud Practicioner",
+      "date": "2023-12",
+      "issuer": "Amazon"
+    },
+    {
+      "name": "Agile",
+      "date": "2023-12",
+      "issuer": "Yesi Education"
+    }
+  ],
+  "research": [
+    {
+      "name": "Modelling Deep Reinforcement Learning Agents in Simulated Financial Markets",
+      "url": "https://strategicreasoning.org/",
+      "summary": "Designed tensorflow deep RL agents to learn trading policies in a Java simulated market for Masters research"
+    },
+    {
+      "name": "Foundational Models for Malware Embeddings Using Spatio-Temporal Parallel Convolutional Networks",
+      "url": "https://arxiv.org/pdf/2305.15488.pdf",
+      "summary": "Novel method for classifying malware and zero-day threats using convolutional neural networks, graph embeddings, and metric learning"
+    },
+    {
+      "name": "Exploration of Open Large Language Models for eDiscovery",
+      "url": "https://aclanthology.org/2023.nllp-1.17.pdf",
+      "summary": "Finetuned open source LLMs on legal data and compared performance on the Technology Assisted Review task"
+    }
+  ],
+  "projects": [
+    {
+      "name": "SobaBall",
+      "summary": "Time series sports betting algorithm to predict NBA outcomes hosted on Heroku and powered by Amazon",
+      "startDate": "2022-02",
+      "endDate": "2022-04"
+    },
+    {
+      "name": "Pix2pix cGAN for medical imaging",
+      "summary": "Implemented the pix2pix paper in Tensorflow to translate segmented medical images into MRI images",
+      "startDate": "2021-10",
+      "endDate": "2021-12"
+    },
+    {
+      "name": "Smart recognition of neurosurgical tools",
+      "summary": "Transfer learning multi-class image classification with from-scratch dataset-augmentation techniques",
+      "startDate": "2020-05",
+      "endDate": "2020-12"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker",
+      "icon": ""
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Fluent",
+      "icon": ""
+    }
+  ]
+}
