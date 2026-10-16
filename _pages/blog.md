@@ -3,6 +3,8 @@ layout: default
 permalink: /blog/
 title: Logbook
 section: logbook
+nav: true
+nav_order: 2
 intro_full_width: true
 pagination:
   enabled: true

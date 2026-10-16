@@ -4,7 +4,7 @@ title: About
 permalink: /
 hide_title: true
 nav: true
-nav_order: 3
+nav_order: 1
 section: about
 profile:
   image: blog_pic.jpeg
@@ -13,8 +13,8 @@ profile:
 description: Elijah Soba · Machine learning
 ---
 
-Hello and welcome to my portfolio/blog! My name is Elijah, a machine learning researcher. I graduated from the University of Michigan ([Go Blue!](https://youtu.be/Fb7hr45ZyDE?si=418mmTBiVWgI0E71)) in '21 with a Bachelors in Biomedical Engineering, and again in '22 with a Masters in Electrical Engineering focusing on [Signal Processing/Machine Learning](https://ece.engin.umich.edu/research/research-areas/signal-image-processing-and-machine-learning/). I currently work at Deloitte's AI Center of Excellence on the Generative AI team. 
+Hello and welcome to my portfolio/logbook! My name is Elijah, I'm a Generative AI Solutions Architect at NVIDIA. I graduated from the University of Michigan (Go Blue!) in ‘21 with a Bachelors in Biomedical Engineering, and again in ‘22 with a Masters in Electrical Engineering focusing on [Signal Processing/Machine Learning](https://ece.engin.umich.edu/research/research-areas/signal-image-processing-and-machine-learning/).
 
-My goal is to dump the lessons I've learned over the years from academia, industry, and self-teaching to help people learn/understand ML. Specifically, I want this to be the resource I wish I had when I was just starting out. Whether it be the fundamentals, advanced topics, coding, cloud, etc., I want to encapsulate information so people at all levels can get something out of it. 
+My goal is to dump the lessons I’ve learned over the years from academia, industry, and self-studying to help lower the barrier of entry to modern Machine Learning. Ideally, I want this to be the resource I wish I had when I was just starting out. My logbook is created from a series of notes that are compiled from a scheduled weekly codex interview on what I have learned from fundamentals to optimal production workloads!
 
-In an effort to not be a perfectionist, I'm posting all of my rough drafts and editing/revising as I go. I've noticed lately that sometimes I spend so much time on getting exact wordings/explanations correct I miss out on valuable time just getting the content down. This also helps me not forget all the content I want to get to eventually - sometimes the idea for blog Y comes to me while writing blog X. If there is some content you find I didn't finish but want to hear what I have to say, feel free to hit me up!
+Please feel free to reach out if the content resonates or you just want to chat about AI!

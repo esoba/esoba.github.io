@@ -1,6 +1,6 @@
 # Elijah Soba’s Logbook
 
-This is a personal site using the al-folio v1 runtime, rather than the upstream academic demo. Keep navigation to Logbook, Resources, and About. About is the home page at `/`, and the Logbook lives at `/blog/`; retain existing published `/blog/:year/:title/` URLs unless explicitly asked to change them.
+This is a personal site using the al-folio v1 runtime, rather than the upstream academic demo. Keep navigation ordered About, Logbook, Resources. About is the home page at `/`, and the Logbook lives at `/blog/`; retain existing published `/blog/:year/:title/` URLs unless explicitly asked to change them.
 
 Use `_posts` for published entries, `_drafts` for work in progress, `_data/resources.yml` for saved links, and `_data/topics.yml` for the hierarchical taxonomy. Resource tags use `Topic/Child`; discovery dates are optional. Do not invent discovery dates or update About facts without user-supplied information.
 

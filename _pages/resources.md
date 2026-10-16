@@ -5,7 +5,7 @@ permalink: /resources/
 section: resources
 intro_full_width: true
 nav: true
-nav_order: 2
+nav_order: 3
 ---
 
 <header class="intro compact"><h1>Resources<span class="accent">.</span></h1><p class="lede{% if page.intro_full_width %} lede-wide{% endif %}">Useful things encountered along the way. A growing collection, organized by topic.</p></header>
