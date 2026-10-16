@@ -1,7 +1,8 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /
+hide_title: true
 nav: true
 nav_order: 3
 section: about

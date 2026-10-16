@@ -1,16 +1,20 @@
 ---
 layout: default
 ---
-<header class="intro compact">
-  <h1>
-    {{ page.title | escape -}}
-    <span class="accent">.</span>
-  </h1>
-  {% if page.description %}
-    <p class="lede{% if page.intro_full_width %} lede-wide{% endif %}">{{ page.description | escape }}</p>
-  {% endif %}
-</header>
-<article class="prose{% if page.profile.image %} about-prose{% endif %}">
+{% if page.hide_title %}
+  <h1 class="sr-only">{{ page.title | escape }}</h1>
+{% else %}
+  <header class="intro compact">
+    <h1>
+      {{ page.title | escape -}}
+      <span class="accent">.</span>
+    </h1>
+    {% if page.description %}
+      <p class="lede{% if page.intro_full_width %} lede-wide{% endif %}">{{ page.description | escape }}</p>
+    {% endif %}
+  </header>
+{% endif %}
+<article class="prose{% if page.profile.image %} about-prose{% endif %}{% if page.hide_title %} without-intro{% endif %}">
   {% if page.profile.image %}
     <div class="about-copy">{{ content }}</div>
     <img

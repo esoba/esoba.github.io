@@ -6,33 +6,33 @@ overrides:
     gem_version: 1.0.15
     upstream_path: _includes/header.liquid
     upstream_sha256: c8663513baded68d9fa5fbe4d6363a976535bbe201efe5138243d0ff03101058
-    local_sha256: 49bd8d0f41836042eea48983c196cc5b4404d5ca97970c5b865390ded80b89e6
-    acknowledged_at: '2026-10-07'
+    local_sha256: '04392b3dc6cfccfeb4ce9ab9a5e2c7bfe4d003b608d4b2f169d8e1e386d244b8'
+    acknowledged_at: '2026-10-16'
   _layouts/archive.liquid:
     owner: al_folio_core
     gem_version: 1.0.15
     upstream_path: _layouts/archive.liquid
     upstream_sha256: e0a3ad4c44093a67b885f497de53cb65e46890485723e7c3c6afb5dd939baaf0
-    local_sha256: 298797c74bd00c475a25836c0257fb567515c48a95923fd1a827607f1dd1895f
-    acknowledged_at: '2026-10-07'
+    local_sha256: 6196ca2dbef190ef702859540c18be6762b50e75c0d931c0c57068710034da8a
+    acknowledged_at: '2026-10-16'
   _layouts/default.liquid:
     owner: al_folio_core
     gem_version: 1.0.15
     upstream_path: _layouts/default.liquid
     upstream_sha256: '0871ab2e3315fc4c9dd5b9706cbd2129fcefa27003f60dfcc882f2aee23b247c'
-    local_sha256: db57194ba15ab43d91696fa4ef03d29ac29a5d6bb2474005efc6ef3807aaaa7b
-    acknowledged_at: '2026-10-07'
+    local_sha256: f745aea4239d7094b296cb8ebb75d42b1af439e5196593b28bbab5b8728b0442
+    acknowledged_at: '2026-10-16'
   _layouts/page.liquid:
     owner: al_folio_core
     gem_version: 1.0.15
     upstream_path: _layouts/page.liquid
     upstream_sha256: eb392ada31cdbe8d1a0f5dbd7229700b5fa7cdf6f4788cbb65d6b746ac3b1231
-    local_sha256: 03ffc426a336c56c9588b0aa573f817721e378032fbbc84fb5f956bc2e92cfae
-    acknowledged_at: '2026-10-07'
+    local_sha256: 01ebef2e624470920e72600637bcd2613edc09c5797f830142b25dcc045746f7
+    acknowledged_at: '2026-10-16'
   _layouts/post.liquid:
     owner: al_folio_core
     gem_version: 1.0.15
     upstream_path: _layouts/post.liquid
     upstream_sha256: b70376c20e97692e319650efd8db6e224439f4ea3257bc32a04b3299d54ad94b
-    local_sha256: cc4d1b8b2d5b59919ac00af1878dfed7d3b130d1e9bffd859215a5f948ba1d49
-    acknowledged_at: '2026-10-07'
+    local_sha256: d3cac82e1abbd6901f6912227525aeb275787bff48f51a80c46dd6b9222194c4
+    acknowledged_at: '2026-10-16'

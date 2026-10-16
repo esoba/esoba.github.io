@@ -2,7 +2,7 @@
 layout: default
 ---
 <header class="intro compact">
-  <a class="back-link" href="{{ '/' | relative_url }}">← Logbook</a>
+  <a class="back-link" href="{{ '/blog/' | relative_url }}">← Logbook</a>
   <h1>
     {% if page.type == 'year' %}{{ page.date | date: '%Y' }}{% else %}{{ page.title | escape }}{% endif %}
     <span class="accent">.</span>

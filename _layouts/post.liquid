@@ -3,7 +3,7 @@ layout: default
 ---
 <article>
   <header class="intro compact post-heading">
-    <a class="back-link" href="{{ '/' | relative_url }}">← Logbook</a>
+    <a class="back-link" href="{{ '/blog/' | relative_url }}">← Logbook</a>
     <p class="eyebrow">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time> /
       {{ page.content | strip_html | number_of_words | divided_by: 180 | plus: 1 }} min read

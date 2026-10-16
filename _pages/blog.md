@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /
+permalink: /blog/
 title: Logbook
 section: logbook
 intro_full_width: true

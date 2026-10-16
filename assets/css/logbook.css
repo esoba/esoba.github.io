@@ -527,6 +527,9 @@ html[data-theme="dark"] .theme-sun {
   align-items: center;
   gap: 32px;
 }
+.prose.without-intro {
+  margin-top: 40px;
+}
 .about-copy {
   min-width: 0;
   line-height: 1.6;
